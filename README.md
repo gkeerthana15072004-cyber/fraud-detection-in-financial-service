@@ -1,97 +1,117 @@
-Student Performance Analysis Using R
+Financial Transaction Fraud Detection Using R
 Project Overview
 
-Student Performance Analysis is a data analysis project developed using R programming. The main purpose of this project is to analyze student academic data and identify patterns related to study hours, attendance, assignment scores, exam marks, and final results.
+Financial institutions process a large number of transactions every second through digital payment platforms, card networks, and other financial systems.
+
+This project uses R programming to analyze high-frequency transaction data and identify suspicious or fraudulent transaction patterns.
+
+The analysis focuses on factors such as:
+
+Transaction amount
+Time of transaction
+Location
+Account age
+Fraud status
+
+The main goal is to convert transaction data into useful fraud and anomaly patterns that can support fraud detection and alerting systems.
 
 Objectives
-Analyze student academic performance.
-Calculate average study hours and exam marks.
-Analyze student attendance.
-Identify Pass and Fail patterns.
-Analyze the relationship between study hours and exam marks.
-Analyze the relationship between attendance and exam marks.
-Visualize student performance using graphs.
-Generate meaningful insights from the dataset.
+Analyze high-frequency financial transaction data.
+Identify fraudulent and genuine transactions.
+Find unusual transaction amount patterns.
+Analyze transaction time patterns.
+Analyze account age associated with fraud.
+Identify locations with a high number of flagged transactions.
+Visualize transaction and fraud patterns.
+Generate useful anomaly signals for fraud detection.
 Dataset
 
 The dataset contains the following attributes:
 
 Attribute	Description
-Student_ID	Unique ID of the student
-Age	Age of the student
-Gender	Gender of the student
-Study_Hours	Average study hours
-Attendance	Attendance percentage
-Assignment_Score	Assignment marks
-Exam_Marks	Final examination marks
-Result	Pass or Fail
+Txn_ID	Unique transaction ID
+Amount	Transaction amount
+Time_Hour	Hour at which the transaction occurred
+Location	Transaction location
+Account_Age	Age of the account in days
+Fraud_Flag	Indicates whether the transaction is fraudulent
 Technologies Used
 R Programming
 RStudio
 CSV Dataset
 Base R Visualization
-Data Analysis Process
-
-Collect Data → Clean Data → Analyze Data → Find Patterns → Visualize Results → Generate Findings
-
 Data Preprocessing
+
+Before analyzing the transaction data, preprocessing is performed to improve data quality.
 
 The dataset is checked for:
 
 Missing values
 Duplicate records
-Incorrect or incomplete data
+Incorrect or incomplete values
 
-R functions such as is.na(), na.omit() and duplicated() are used for preprocessing.
+The following R functions are used:
+
+is.na()
+na.omit()
+duplicated()
+Data Analysis Process
+
+Collect Transactions → Clean Data → Analyze Data → Find Anomalies → Visualize Results → Flag/Alert Suspicious Transactions
+
+Analysis Performed
+1. Transaction Amount Analysis
+
+The transaction amounts are analyzed to identify unusually high-value transactions that may be associated with fraud.
+
+2. Time Pattern Analysis
+
+Transaction hours are analyzed to identify suspicious activity during unusual hours, especially late-night and early-morning transactions.
+
+3. Account Age Analysis
+
+Account age is analyzed to determine whether newly created accounts are more frequently associated with fraudulent transactions.
+
+4. Location Analysis
+
+Transaction locations are analyzed to identify locations with a higher concentration of flagged transactions.
+
+5. Fraud Status Analysis
+
+The number of genuine and fraudulent transactions is calculated using frequency analysis.
 
 R Functions Used
-read.csv()
-print()
-str()
-summary()
 mean()
+print()
 table()
-aggregate()
-cor()
 hist()
 barplot()
-plot()
-Analysis Performed
-Average Performance
-
-The project calculates:
-
-Average age
-Average study hours
-Average attendance
-Average exam marks
-Result Analysis
-
-The number of students who Passed and Failed is calculated using a frequency table.
-
-Study Hours Analysis
-
-The relationship between study hours and exam marks is analyzed to identify performance patterns.
-
-Attendance Analysis
-
-Attendance and exam marks are compared to identify academic performance patterns.
-
-Gender-wise Performance
-
-Average exam marks are calculated for different gender groups.
-
 Visualizations
 
-The project generates:
+The project generates visualizations for:
 
-Exam Marks Distribution
-Student Result Distribution
-Attendance Distribution
-Study Hours vs Exam Marks
-Gender-wise Average Exam Marks
+Transaction Amount Distribution
+Fraud Status — Genuine vs Fraudulent Transactions
+Location-wise Transaction Count
+Filtered Fraudulent Transactions
+Fraud Status within the Selected Location
+Expected Findings
+
+The analysis can identify patterns such as:
+
+Fraudulent transactions having unusually high transaction amounts.
+Fraudulent transactions occurring during unusual hours.
+Newly created accounts being associated with suspicious transactions.
+Certain locations having a higher concentration of flagged transactions.
+
+The sample analysis in the attached assignment identifies 40% fraudulent transactions, higher average amounts for fraudulent transactions, a concentration of fraudulent transactions between midnight and 3 AM, and Delhi as the location with the highest share of flagged transactions.
+
 Conclusion
 
-Student Performance Analysis using R provides an effective way to analyze academic data. R can be used for data cleaning, statistical calculations, frequency analysis, correlation analysis, and visualization.
+Financial Transaction Fraud Detection using R provides an efficient approach for analyzing large volumes of transaction data.
 
-The identified patterns can help understand student performance and support better academic decision-making.
+R can be used for data cleaning, statistical analysis, frequency counting, anomaly identification, and visualization.
+
+By analyzing transaction amount, time, account age, and location, useful fraud patterns can be identified. These patterns can support real-time fraud alerting and fraud investigation workflows.
+
+The project demonstrates how R-based data analytics can be applied to a real-world financial risk and fraud detection problem.
